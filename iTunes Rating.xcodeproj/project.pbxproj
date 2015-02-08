@@ -1,0 +1,613 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B669BD6D1A8343630072F17D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B669BD6C1A8343630072F17D /* AppDelegate.m */; };
+		B669BD6F1A8343630072F17D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B669BD6E1A8343630072F17D /* main.m */; };
+		B669BD721A8343630072F17D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B669BD711A8343630072F17D /* ViewController.m */; };
+		B669BD741A8343630072F17D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B669BD731A8343630072F17D /* Images.xcassets */; };
+		B669BD771A8343630072F17D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B669BD751A8343630072F17D /* Main.storyboard */; };
+		B669BD831A8343640072F17D /* iTunes_RatingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B669BD821A8343640072F17D /* iTunes_RatingTests.m */; };
+		B669BD931A8343940072F17D /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B669BD921A8343940072F17D /* NotificationCenter.framework */; };
+		B669BD9D1A8343940072F17D /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B669BD9C1A8343940072F17D /* TodayViewController.m */; };
+		B669BD9F1A8343940072F17D /* TodayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B669BD9E1A8343940072F17D /* TodayViewController.xib */; };
+		B669BDA21A8343940072F17D /* iTunes Rating Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B669BD901A8343940072F17D /* iTunes Rating Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B669BDAA1A8482EB0072F17D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B669BDA91A8482EB0072F17D /* InfoPlist.strings */; };
+		B669BDBA1A8659320072F17D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B669BDB91A8659320072F17D /* Images.xcassets */; };
+		B669BDBD1A868DAF0072F17D /* HighlightedRatingLevelIndicatorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B669BDBC1A868DAF0072F17D /* HighlightedRatingLevelIndicatorCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B669BD7D1A8343640072F17D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B669BD5E1A8343630072F17D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B669BD651A8343630072F17D;
+			remoteInfo = "iTunes Rating";
+		};
+		B669BDA01A8343940072F17D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B669BD5E1A8343630072F17D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B669BD8F1A8343940072F17D;
+			remoteInfo = "iTunes Rating Widget";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B669BDA61A8343940072F17D /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B669BDA21A8343940072F17D /* iTunes Rating Widget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		B669BD661A8343630072F17D /* iTunes Rating.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iTunes Rating.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B669BD6A1A8343630072F17D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B669BD6B1A8343630072F17D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B669BD6C1A8343630072F17D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B669BD6E1A8343630072F17D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B669BD701A8343630072F17D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B669BD711A8343630072F17D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B669BD731A8343630072F17D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B669BD761A8343630072F17D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B669BD7C1A8343640072F17D /* iTunes RatingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iTunes RatingTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B669BD811A8343640072F17D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B669BD821A8343640072F17D /* iTunes_RatingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iTunes_RatingTests.m; sourceTree = "<group>"; };
+		B669BD901A8343940072F17D /* iTunes Rating Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "iTunes Rating Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B669BD921A8343940072F17D /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		B669BD961A8343940072F17D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B669BD971A8343940072F17D /* iTunes Rating Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "iTunes Rating Widget.entitlements"; sourceTree = "<group>"; };
+		B669BD9B1A8343940072F17D /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
+		B669BD9C1A8343940072F17D /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
+		B669BD9E1A8343940072F17D /* TodayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodayViewController.xib; sourceTree = "<group>"; };
+		B669BDA81A83D1F00072F17D /* iTunes Rating.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "iTunes Rating.entitlements"; sourceTree = "<group>"; };
+		B669BDA91A8482EB0072F17D /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
+		B669BDB91A8659320072F17D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B669BDBB1A868DAF0072F17D /* HighlightedRatingLevelIndicatorCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HighlightedRatingLevelIndicatorCell.h; sourceTree = "<group>"; };
+		B669BDBC1A868DAF0072F17D /* HighlightedRatingLevelIndicatorCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HighlightedRatingLevelIndicatorCell.m; sourceTree = "<group>"; };
+		B669BDBE1A868DBD0072F17D /* iTunes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iTunes.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B669BD631A8343630072F17D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B669BD791A8343640072F17D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B669BD8D1A8343940072F17D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B669BD931A8343940072F17D /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B669BD5D1A8343630072F17D = {
+			isa = PBXGroup;
+			children = (
+				B669BD681A8343630072F17D /* iTunes Rating */,
+				B669BD941A8343940072F17D /* iTunes Rating Widget */,
+				B669BD7F1A8343640072F17D /* iTunes RatingTests */,
+				B669BD911A8343940072F17D /* Frameworks */,
+				B669BD671A8343630072F17D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B669BD671A8343630072F17D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B669BD661A8343630072F17D /* iTunes Rating.app */,
+				B669BD7C1A8343640072F17D /* iTunes RatingTests.xctest */,
+				B669BD901A8343940072F17D /* iTunes Rating Widget.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B669BD681A8343630072F17D /* iTunes Rating */ = {
+			isa = PBXGroup;
+			children = (
+				B669BD6B1A8343630072F17D /* AppDelegate.h */,
+				B669BD6C1A8343630072F17D /* AppDelegate.m */,
+				B669BD701A8343630072F17D /* ViewController.h */,
+				B669BD711A8343630072F17D /* ViewController.m */,
+				B669BD731A8343630072F17D /* Images.xcassets */,
+				B669BD751A8343630072F17D /* Main.storyboard */,
+				B669BD691A8343630072F17D /* Supporting Files */,
+			);
+			path = "iTunes Rating";
+			sourceTree = "<group>";
+		};
+		B669BD691A8343630072F17D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B669BD6A1A8343630072F17D /* Info.plist */,
+				B669BD6E1A8343630072F17D /* main.m */,
+				B669BDA81A83D1F00072F17D /* iTunes Rating.entitlements */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B669BD7F1A8343640072F17D /* iTunes RatingTests */ = {
+			isa = PBXGroup;
+			children = (
+				B669BD821A8343640072F17D /* iTunes_RatingTests.m */,
+				B669BD801A8343640072F17D /* Supporting Files */,
+			);
+			path = "iTunes RatingTests";
+			sourceTree = "<group>";
+		};
+		B669BD801A8343640072F17D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B669BD811A8343640072F17D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B669BD911A8343940072F17D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B669BD921A8343940072F17D /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B669BD941A8343940072F17D /* iTunes Rating Widget */ = {
+			isa = PBXGroup;
+			children = (
+				B669BDBE1A868DBD0072F17D /* iTunes.h */,
+				B669BD9B1A8343940072F17D /* TodayViewController.h */,
+				B669BD9C1A8343940072F17D /* TodayViewController.m */,
+				B669BD9E1A8343940072F17D /* TodayViewController.xib */,
+				B669BDBB1A868DAF0072F17D /* HighlightedRatingLevelIndicatorCell.h */,
+				B669BDBC1A868DAF0072F17D /* HighlightedRatingLevelIndicatorCell.m */,
+				B669BDB91A8659320072F17D /* Images.xcassets */,
+				B669BD951A8343940072F17D /* Supporting Files */,
+			);
+			path = "iTunes Rating Widget";
+			sourceTree = "<group>";
+		};
+		B669BD951A8343940072F17D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B669BD961A8343940072F17D /* Info.plist */,
+				B669BDA91A8482EB0072F17D /* InfoPlist.strings */,
+				B669BD971A8343940072F17D /* iTunes Rating Widget.entitlements */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B669BD651A8343630072F17D /* iTunes Rating */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B669BD861A8343640072F17D /* Build configuration list for PBXNativeTarget "iTunes Rating" */;
+			buildPhases = (
+				B669BD621A8343630072F17D /* Sources */,
+				B669BD631A8343630072F17D /* Frameworks */,
+				B669BD641A8343630072F17D /* Resources */,
+				B669BDA61A8343940072F17D /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B669BDA11A8343940072F17D /* PBXTargetDependency */,
+			);
+			name = "iTunes Rating";
+			productName = "iTunes Rating";
+			productReference = B669BD661A8343630072F17D /* iTunes Rating.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B669BD7B1A8343640072F17D /* iTunes RatingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B669BD891A8343640072F17D /* Build configuration list for PBXNativeTarget "iTunes RatingTests" */;
+			buildPhases = (
+				B669BD781A8343640072F17D /* Sources */,
+				B669BD791A8343640072F17D /* Frameworks */,
+				B669BD7A1A8343640072F17D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B669BD7E1A8343640072F17D /* PBXTargetDependency */,
+			);
+			name = "iTunes RatingTests";
+			productName = "iTunes RatingTests";
+			productReference = B669BD7C1A8343640072F17D /* iTunes RatingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B669BD8F1A8343940072F17D /* iTunes Rating Widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B669BDA31A8343940072F17D /* Build configuration list for PBXNativeTarget "iTunes Rating Widget" */;
+			buildPhases = (
+				B669BD8C1A8343940072F17D /* Sources */,
+				B669BD8D1A8343940072F17D /* Frameworks */,
+				B669BD8E1A8343940072F17D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "iTunes Rating Widget";
+			productName = "iTunes Rating Widget";
+			productReference = B669BD901A8343940072F17D /* iTunes Rating Widget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B669BD5E1A8343630072F17D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Genji App";
+				TargetAttributes = {
+					B669BD651A8343630072F17D = {
+						CreatedOnToolsVersion = 6.1.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
+					B669BD7B1A8343640072F17D = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = B669BD651A8343630072F17D;
+					};
+					B669BD8F1A8343940072F17D = {
+						CreatedOnToolsVersion = 6.1.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = B669BD611A8343630072F17D /* Build configuration list for PBXProject "iTunes Rating" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B669BD5D1A8343630072F17D;
+			productRefGroup = B669BD671A8343630072F17D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B669BD651A8343630072F17D /* iTunes Rating */,
+				B669BD8F1A8343940072F17D /* iTunes Rating Widget */,
+				B669BD7B1A8343640072F17D /* iTunes RatingTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B669BD641A8343630072F17D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B669BD741A8343630072F17D /* Images.xcassets in Resources */,
+				B669BD771A8343630072F17D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B669BD7A1A8343640072F17D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B669BD8E1A8343940072F17D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B669BDBA1A8659320072F17D /* Images.xcassets in Resources */,
+				B669BD9F1A8343940072F17D /* TodayViewController.xib in Resources */,
+				B669BDAA1A8482EB0072F17D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B669BD621A8343630072F17D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B669BD721A8343630072F17D /* ViewController.m in Sources */,
+				B669BD6F1A8343630072F17D /* main.m in Sources */,
+				B669BD6D1A8343630072F17D /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B669BD781A8343640072F17D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B669BD831A8343640072F17D /* iTunes_RatingTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B669BD8C1A8343940072F17D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B669BD9D1A8343940072F17D /* TodayViewController.m in Sources */,
+				B669BDBD1A868DAF0072F17D /* HighlightedRatingLevelIndicatorCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B669BD7E1A8343640072F17D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B669BD651A8343630072F17D /* iTunes Rating */;
+			targetProxy = B669BD7D1A8343640072F17D /* PBXContainerItemProxy */;
+		};
+		B669BDA11A8343940072F17D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B669BD8F1A8343940072F17D /* iTunes Rating Widget */;
+			targetProxy = B669BDA01A8343940072F17D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B669BD751A8343630072F17D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B669BD761A8343630072F17D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B669BD841A8343640072F17D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		B669BD851A8343640072F17D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		B669BD871A8343640072F17D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "iTunes Rating/iTunes Rating.entitlements";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "iTunes Rating/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B669BD881A8343640072F17D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "iTunes Rating/iTunes Rating.entitlements";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "iTunes Rating/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B669BD8A1A8343640072F17D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "iTunes RatingTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iTunes Rating.app/Contents/MacOS/iTunes Rating";
+			};
+			name = Debug;
+		};
+		B669BD8B1A8343640072F17D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "iTunes RatingTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iTunes Rating.app/Contents/MacOS/iTunes Rating";
+			};
+			name = Release;
+		};
+		B669BDA41A8343940072F17D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "iTunes Rating Widget/iTunes Rating Widget.entitlements";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "iTunes Rating Widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		B669BDA51A8343940072F17D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "iTunes Rating Widget/iTunes Rating Widget.entitlements";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "iTunes Rating Widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B669BD611A8343630072F17D /* Build configuration list for PBXProject "iTunes Rating" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B669BD841A8343640072F17D /* Debug */,
+				B669BD851A8343640072F17D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B669BD861A8343640072F17D /* Build configuration list for PBXNativeTarget "iTunes Rating" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B669BD871A8343640072F17D /* Debug */,
+				B669BD881A8343640072F17D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B669BD891A8343640072F17D /* Build configuration list for PBXNativeTarget "iTunes RatingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B669BD8A1A8343640072F17D /* Debug */,
+				B669BD8B1A8343640072F17D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B669BDA31A8343940072F17D /* Build configuration list for PBXNativeTarget "iTunes Rating Widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B669BDA41A8343940072F17D /* Debug */,
+				B669BDA51A8343940072F17D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B669BD5E1A8343630072F17D /* Project object */;
+}
