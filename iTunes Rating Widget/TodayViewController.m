@@ -25,6 +25,11 @@
 
 @implementation TodayViewController
 
+- (void)viewWillAppear
+{
+  [[NSDistributedNotificationCenter defaultCenter] addObserver:self selector:@selector(updateView:) name:@"com.apple.iTunes.playerInfo" object:nil];
+}
+
 - (void)viewWillDisappear
 {
   [[NSDistributedNotificationCenter defaultCenter] removeObserver:self];
@@ -96,8 +101,6 @@
 #pragma mark NCWidgetProviding Method
 - (void)widgetPerformUpdateWithCompletionHandler:(void (^)(NCUpdateResult result))completionHandler
 {
-  [[NSDistributedNotificationCenter defaultCenter] addObserver:self selector:@selector(updateView:) name:@"com.apple.iTunes.playerInfo" object:nil];
-
   [self updateView:nil];
 
   completionHandler(NCUpdateResultNewData);
