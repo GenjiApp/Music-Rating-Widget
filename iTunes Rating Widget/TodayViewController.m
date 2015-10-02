@@ -10,6 +10,9 @@
 #import "TodayViewController.h"
 #import "iTunes.h"
 
+static NSString * const kITunesBundleIdentifier = @"com.apple.iTunes";
+static NSString * const kITunesDistributedNotificationName = @"com.apple.iTunes.playerInfo";
+
 @interface TodayViewController () <NCWidgetProviding>
 
 @property (nonatomic, readonly) iTunesApplication *iTunesApp;
@@ -27,18 +30,28 @@
 
 - (void)viewWillAppear
 {
-  [[NSDistributedNotificationCenter defaultCenter] addObserver:self selector:@selector(updateView:) name:@"com.apple.iTunes.playerInfo" object:nil];
+  [super viewWillAppear];
+
+  [[NSDistributedNotificationCenter defaultCenter] addObserver:self selector:@selector(didCatchITunesNotification:) name:kITunesDistributedNotificationName object:nil];
+  [self updateView];
 }
 
 - (void)viewWillDisappear
 {
-  [[NSDistributedNotificationCenter defaultCenter] removeObserver:self];
+  [[NSDistributedNotificationCenter defaultCenter] removeObserver:self name:kITunesDistributedNotificationName object:nil];
+
+  [super viewWillDisappear];
 }
 
 
 #pragma mark -
 #pragma mark Private Method
-- (void)updateView:(NSNotification *)notification
+- (void)didCatchITunesNotification:(NSNotification *)notification
+{
+  [self updateView];
+}
+
+- (void)updateView
 {
   // iTunesApp.currentTrack.persistentID 等の実行まで行くと、未起動状態の iTunes が起動してしまう。
   // iTunesApplication オブジェクトの生成、iTunesApp.running、iTunesApp.currentTrack の
@@ -79,7 +92,7 @@
 {
   static iTunesApplication *iTunesApp = nil;
   if(!iTunesApp) {
-    iTunesApp = [SBApplication applicationWithBundleIdentifier:@"com.apple.iTunes"];
+    iTunesApp = [SBApplication applicationWithBundleIdentifier:kITunesBundleIdentifier];
   }
   return iTunesApp;
 }
@@ -101,7 +114,7 @@
 #pragma mark NCWidgetProviding Method
 - (void)widgetPerformUpdateWithCompletionHandler:(void (^)(NCUpdateResult result))completionHandler
 {
-  [self updateView:nil];
+  [self updateView];
 
   completionHandler(NCUpdateResultNewData);
 }
