@@ -17,7 +17,7 @@
 
 - (NSLevelIndicatorStyle)levelIndicatorStyle
 {
-  return NSRatingLevelIndicatorStyle;
+  return NSLevelIndicatorStyleRating;
 }
 
 @end
