@@ -1,6 +1,6 @@
 //
-//  iTunes_RatingTests.m
-//  iTunes RatingTests
+//  Music_RatingTests.m
+//  Music RatingTests
 //
 //  Created by Genji on 2015/02/05.
 //  Copyright (c) 2015 Genji App. All rights reserved.
@@ -9,11 +9,11 @@
 #import <Cocoa/Cocoa.h>
 #import <XCTest/XCTest.h>
 
-@interface iTunes_RatingTests : XCTestCase
+@interface Music_RatingTests : XCTestCase
 
 @end
 
-@implementation iTunes_RatingTests
+@implementation Music_RatingTests
 
 - (void)setUp
 {

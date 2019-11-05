@@ -1,4 +1,0 @@
-/* Display name and description for this extension. */
-"CFBundleDisplayName" = "iTunes Rating Widget";
-"com.apple.notificationcenter.widget.description" = "iTunes Rating Widget";
-

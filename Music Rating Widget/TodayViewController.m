@@ -1,6 +1,6 @@
 //
 //  TodayViewController.m
-//  iTunes Rating Widget
+//  Music Rating Widget
 //
 //  Created by Genji on 2015/02/05.
 //  Copyright (c) 2015 Genji App. All rights reserved.
@@ -10,8 +10,8 @@
 #import "TodayViewController.h"
 #import "Music.h"
 
-static NSString * const kITunesBundleIdentifier = @"com.apple.Music";
-static NSString * const kITunesDistributedNotificationName = @"com.apple.Music.playerInfo";
+static NSString * const kMusicBundleIdentifier = @"com.apple.Music";
+static NSString * const kMusicDistributedNotificationName = @"com.apple.Music.playerInfo";
 
 @interface TodayViewController () <NCWidgetProviding>
 
@@ -32,13 +32,13 @@ static NSString * const kITunesDistributedNotificationName = @"com.apple.Music.p
 {
   [super viewWillAppear];
 
-  [[NSDistributedNotificationCenter defaultCenter] addObserver:self selector:@selector(didCatchITunesNotification:) name:kITunesDistributedNotificationName object:nil];
+  [[NSDistributedNotificationCenter defaultCenter] addObserver:self selector:@selector(didCatchMusicNotification:) name:kMusicDistributedNotificationName object:nil];
   [self updateView];
 }
 
 - (void)viewWillDisappear
 {
-  [[NSDistributedNotificationCenter defaultCenter] removeObserver:self name:kITunesDistributedNotificationName object:nil];
+  [[NSDistributedNotificationCenter defaultCenter] removeObserver:self name:kMusicDistributedNotificationName object:nil];
 
   [super viewWillDisappear];
 }
@@ -46,15 +46,15 @@ static NSString * const kITunesDistributedNotificationName = @"com.apple.Music.p
 
 #pragma mark -
 #pragma mark Private Method
-- (void)didCatchITunesNotification:(NSNotification *)notification
+- (void)didCatchMusicNotification:(NSNotification *)notification
 {
   [self updateView];
 }
 
 - (void)updateView
 {
-  // iTunesApp.currentTrack.persistentID 等の実行まで行くと、未起動状態の iTunes が起動してしまう。
-  // iTunesApplication オブジェクトの生成、iTunesApp.running、iTunesApp.currentTrack の
+  // MusicApp.currentTrack.persistentID 等の実行まで行くと、未起動状態の Music が起動してしまう。
+  // MusicApplication オブジェクトの生成、MusicApp.running、MusicApp.currentTrack の
   // 実行まではOK。
   MusicTrack *track = self.MusicApp.currentTrack;
   if(self.MusicApp.running && track.persistentID) {
@@ -101,7 +101,7 @@ static NSString * const kITunesDistributedNotificationName = @"com.apple.Music.p
 {
   static MusicApplication *MusicApp = nil;
   if(!MusicApp) {
-    MusicApp = [SBApplication applicationWithBundleIdentifier:kITunesBundleIdentifier];
+    MusicApp = [SBApplication applicationWithBundleIdentifier:kMusicBundleIdentifier];
   }
   return MusicApp;
 }

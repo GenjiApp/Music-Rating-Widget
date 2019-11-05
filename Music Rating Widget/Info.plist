@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>iTunes Rating Widget</string>
+	<string>Music Rating Widget</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -31,7 +31,7 @@
 		<key>NSExtensionPrincipalClass</key>
 		<string>TodayViewController</string>
 		<key>com.apple.notificationcenter.widget.description</key>
-		<string>iTunes Rating Widget</string>
+		<string>Music Rating Widget</string>
 	</dict>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2015 Genji App. All rights reserved.</string>
