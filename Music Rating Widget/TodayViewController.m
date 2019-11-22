@@ -17,12 +17,13 @@ static NSString * const kMusicDistributedNotificationName = @"com.apple.Music.pl
 
 @property (nonatomic, readonly) MusicApplication *MusicApp;
 
-@property (nonatomic, weak) IBOutlet NSImageView *artworkImageView;
 @property (nonatomic, weak) IBOutlet NSTextField *trackNameLabel;
 @property (nonatomic, weak) IBOutlet NSTextField *artistNameAndAlbumNameLabel;
 @property (nonatomic, weak) IBOutlet NSLevelIndicator *ratingLevelIndicator;
+@property (nonatomic, weak) IBOutlet NSButton *artworkImageButton;
 
 - (IBAction)ratingDidChange:(id)sender;
+- (IBAction)togglePlayPause:(id)sender;
 
 @end
 
@@ -87,7 +88,7 @@ static NSString * const kMusicDistributedNotificationName = @"com.apple.Music.pl
     else {
       artworkImage = [NSImage imageNamed:@"ArtworkPlaceholder"];
     }
-    self.artworkImageView.image = artworkImage;
+    self.artworkImageButton.image = artworkImage;
   }
   else {
     self.view.hidden = YES;
@@ -116,6 +117,11 @@ static NSString * const kMusicDistributedNotificationName = @"com.apple.Music.pl
     NSLevelIndicator *ratingLevelIndicator = (NSLevelIndicator *)sender;
     track.rating = ratingLevelIndicator.integerValue * 20;
   }
+}
+
+- (IBAction)togglePlayPause:(id)sender
+{
+  [self.MusicApp playpause];
 }
 
 

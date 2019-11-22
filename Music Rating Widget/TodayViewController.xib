@@ -8,7 +8,7 @@
         <customObject id="-2" userLabel="File's Owner" customClass="TodayViewController">
             <connections>
                 <outlet property="artistNameAndAlbumNameLabel" destination="JJ2-gA-cKX" id="9ED-yD-Dzz"/>
-                <outlet property="artworkImageView" destination="hwj-jv-fxW" id="ZvW-YG-OTd"/>
+                <outlet property="artworkImageButton" destination="Q5z-lV-rK3" id="ISr-Zo-EOs"/>
                 <outlet property="ratingLevelIndicator" destination="zFI-DX-oWu" id="HGg-IH-nrv"/>
                 <outlet property="trackNameLabel" destination="F8l-Ku-Jh2" id="ygs-uk-Hdl"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
@@ -17,10 +17,10 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView simulatedAppContext="notificationCenter" translatesAutoresizingMaskIntoConstraints="NO" id="Hz6-mo-xeY">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="63"/>
             <subviews>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="F8l-Ku-Jh2" userLabel="Track Name Label">
-                    <rect key="frame" x="70" y="46" width="252" height="19"/>
+                    <rect key="frame" x="69" y="44" width="253" height="19"/>
                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Track Name" id="ZF8-wc-e1G">
                         <font key="font" metaFont="system" size="15"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -28,44 +28,52 @@
                     </textFieldCell>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="JJ2-gA-cKX" userLabel="Artist Name and Album Name Label">
-                    <rect key="frame" x="70" y="20" width="252" height="18"/>
+                    <rect key="frame" x="69" y="20" width="253" height="16"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="16" id="yAm-wL-LoH"/>
+                    </constraints>
                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Artist - Album" id="7f4-PJ-whK">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
+                <button translatesAutoresizingMaskIntoConstraints="NO" id="Q5z-lV-rK3">
+                    <rect key="frame" x="0.0" y="0.0" width="63" height="63"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="63" id="hhw-Za-hEf"/>
+                    </constraints>
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="ArtworkPlaceholder" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="3dX-60-y4f">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="togglePlayPause:" target="-2" id="Gml-PP-bPr"/>
+                    </connections>
+                </button>
                 <levelIndicator focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zFI-DX-oWu">
-                    <rect key="frame" x="72" y="0.0" width="60" height="12"/>
+                    <rect key="frame" x="71" y="0.0" width="60" height="12"/>
                     <levelIndicatorCell key="cell" editable="YES" focusRingType="none" alignment="left" doubleValue="5" maxValue="5" levelIndicatorStyle="rating" id="Ab6-dG-Wrj" customClass="HighlightedRatingLevelIndicatorCell"/>
                     <connections>
                         <action selector="ratingDidChange:" target="-2" id="zQw-id-BPE"/>
                     </connections>
                 </levelIndicator>
-                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hwj-jv-fxW" userLabel="Artwork Image View">
-                    <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="64" id="5ky-va-MB9"/>
-                        <constraint firstAttribute="width" constant="64" id="QXl-7R-b24"/>
-                    </constraints>
-                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="ArtworkPlaceholder" id="M1P-GY-xb8"/>
-                </imageView>
             </subviews>
             <constraints>
-                <constraint firstItem="zFI-DX-oWu" firstAttribute="top" secondItem="JJ2-gA-cKX" secondAttribute="bottom" constant="8" symbolic="YES" id="2G3-Q2-fA7"/>
-                <constraint firstAttribute="trailing" secondItem="JJ2-gA-cKX" secondAttribute="trailing" id="4jA-wY-f3r"/>
-                <constraint firstAttribute="bottom" secondItem="hwj-jv-fxW" secondAttribute="bottom" id="61P-pP-L64"/>
-                <constraint firstItem="F8l-Ku-Jh2" firstAttribute="leading" secondItem="JJ2-gA-cKX" secondAttribute="leading" id="DHZ-CL-mt1"/>
-                <constraint firstItem="hwj-jv-fxW" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="HWx-LQ-Vbq"/>
-                <constraint firstItem="zFI-DX-oWu" firstAttribute="leading" secondItem="F8l-Ku-Jh2" secondAttribute="leading" id="K6k-Y4-uNz"/>
-                <constraint firstItem="F8l-Ku-Jh2" firstAttribute="leading" secondItem="hwj-jv-fxW" secondAttribute="trailing" constant="8" symbolic="YES" id="Lh8-JB-VnD"/>
-                <constraint firstItem="JJ2-gA-cKX" firstAttribute="top" secondItem="F8l-Ku-Jh2" secondAttribute="bottom" constant="8" symbolic="YES" id="TGY-vQ-6UB"/>
-                <constraint firstItem="F8l-Ku-Jh2" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="TgN-Fo-X1G"/>
-                <constraint firstAttribute="bottom" secondItem="zFI-DX-oWu" secondAttribute="bottom" id="WZQ-KW-KjS"/>
-                <constraint firstItem="hwj-jv-fxW" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="1" id="c7i-oa-AJM"/>
-                <constraint firstAttribute="trailing" secondItem="F8l-Ku-Jh2" secondAttribute="trailing" id="grZ-BU-7qW"/>
+                <constraint firstItem="Q5z-lV-rK3" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="10a-8A-NgF"/>
+                <constraint firstAttribute="trailing" secondItem="F8l-Ku-Jh2" secondAttribute="trailing" id="18R-c9-kBb"/>
+                <constraint firstItem="F8l-Ku-Jh2" firstAttribute="leading" secondItem="Q5z-lV-rK3" secondAttribute="trailing" constant="8" symbolic="YES" id="2v8-Tp-Tpj"/>
+                <constraint firstItem="Q5z-lV-rK3" firstAttribute="top" secondItem="F8l-Ku-Jh2" secondAttribute="top" id="QBw-PX-U43"/>
+                <constraint firstItem="JJ2-gA-cKX" firstAttribute="leading" secondItem="zFI-DX-oWu" secondAttribute="leading" id="XQn-mo-ygL"/>
+                <constraint firstItem="zFI-DX-oWu" firstAttribute="top" secondItem="JJ2-gA-cKX" secondAttribute="bottom" constant="8" symbolic="YES" id="YY3-sb-zPT"/>
+                <constraint firstItem="JJ2-gA-cKX" firstAttribute="top" secondItem="F8l-Ku-Jh2" secondAttribute="bottom" constant="8" symbolic="YES" id="cdb-QL-LDS"/>
+                <constraint firstItem="Q5z-lV-rK3" firstAttribute="bottom" secondItem="zFI-DX-oWu" secondAttribute="bottom" id="k2b-Bj-e3I"/>
+                <constraint firstItem="Q5z-lV-rK3" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="kId-lS-zrJ"/>
+                <constraint firstItem="F8l-Ku-Jh2" firstAttribute="trailing" secondItem="JJ2-gA-cKX" secondAttribute="trailing" id="r8Q-W8-blO"/>
+                <constraint firstItem="F8l-Ku-Jh2" firstAttribute="leading" secondItem="JJ2-gA-cKX" secondAttribute="leading" id="w9M-Yo-6OX"/>
+                <constraint firstAttribute="bottom" secondItem="Q5z-lV-rK3" secondAttribute="bottom" id="zYR-hq-TRx"/>
             </constraints>
-            <point key="canvasLocation" x="139" y="155"/>
+            <point key="canvasLocation" x="139" y="154.5"/>
         </customView>
     </objects>
     <resources>
